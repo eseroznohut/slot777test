@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slot Deneme</title>
+    <link rel="icon" href="">
+    <link href="/assets/css/bootstrap.css">
+    <link href="/assets/css/default.css" rel="stylesheet">
+</head>
+<body>
+    <div class="SM_container">
+        <div class="SM_game_container">
+            <div class="SM_spin_row_container">
+                <div class="col-md-3 spin_row" id="spin_row_1">
+                    <div class="SM_row_container" id="row_1">
+                        <div class="SM_item SM_active">
+                            <img key='1' src="/assets/image/1.png" class="slotImage w-100" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 spin_row" id="spin_row_2">
+                    <div class="SM_row_container" id="row_2">
+                        <div class="SM_item SM_active">
+                            <img key='1' src="/assets/image/1.png" class="slotImage w-100" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 spin_row" id="spin_row_3">
+                    <div class="SM_row_container" id="row_3">
+                        <div class="SM_item SM_active">
+                            <img key='1' src="/assets/image/1.png" class="slotImage w-100" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="SM_play_btn_container">
+                <button onClick={startSpin()} id="SM_play_btn">
+                    <svg width="32px" height="32px" viewBox="-0.5 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                        </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-347.000000, -3766.000000)" fill="#000000">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path d="M296.494737,3608.57322 L292.500752,3606.14219 C291.83208,3605.73542 291,3606.25002 291,3607.06891 L291,3611.93095 C291,3612.7509 291.83208,3613.26444 292.500752,3612.85767 L296.494737,3610.42771 C297.168421,3610.01774 297.168421,3608.98319 296.494737,3608.57322" id="play-[#1003]"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <div id="SM_mute_button">
+                    <button onClick={toggleSound()}>Sesi Kapat</button>
+                </div>
+            </div>
+        </div>
+        <div id="SM_board_instruction">
+            <div id="SM_score_board_container">
+                <div class="SM_score_board_item" id="SM_credit">
+                    Bakiye: <span>1000</span>
+                </div>
+                <div class="SM_score_board_item">
+                    Bahis: <input onChange={isEnoughCredit()} id="SM_bet" type="number" step="1" min='1' max="100" class="w-50 text-center" value="1" />
+                </div>
+                <div class="SM_score_board_item" id="SM_won">
+                    Kazanç: <span>0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js" ></script>
+</body>
+</html>
